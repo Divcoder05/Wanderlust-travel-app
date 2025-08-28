@@ -39,9 +39,9 @@ const sessionOptions = {
   },
 };
 
-let MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
-// const dbUrl = process.env.ATLASDB_URL;
-// console.log(dbUrl);
+// let MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+const dbUrl = process.env.ATLASDB_URL;
+console.log(dbUrl);
 main()
   .then(() => {
     console.log("connection successful");
@@ -50,7 +50,7 @@ main()
     console.log(err);
   });
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(dbUrl);
 }
 
 
