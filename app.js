@@ -18,11 +18,6 @@ const User = require("./models/user.js");
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
-<<<<<<< HEAD
-
-=======
->>>>>>> 2995960d1857b434a4fabc3f931c30e12d6a2a0f
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
