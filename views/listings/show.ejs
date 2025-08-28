@@ -9,14 +9,14 @@
             class="card-img-top show-img " 
             alt="listing image">
             <div class="card-body">
-                <p class="card-text">Owned by <i><%=data.owner.username%></i></p> <br>
+                <p class="card-text">Owned by <i><%=data.owner ? data.owner.username : "Unknown"%></i></p> <br>
                 <p class="card-text"><%=data.description%></p> <br>
                 <p class="card-text">&#8377;<%=data.price.toLocaleString("en-IN")%></p> <br>
                 <p class="card-text"><%=data.location%></p> <br>
                 <p class="card-text"><%=data.country%></p>
             </div>
         </div>
-       <% if(currUser && data.owner._id.equals(currUser._id)) {%>
+       <% if(currUser && data.owner && data.owner.username === currUser.username) {%>
         <div class="btns">
             <a 
             class="btn btn-dark col-1 offset-3 edit-btn" 
