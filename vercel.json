@@ -8,13 +8,8 @@
   ],
   "routes": [
     {
-      "src": "^/$",
-      "status": 301,
-      "headers": { "Location": "/listings" }
-    },
-    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "app.js"
     }
   ]
 }
