@@ -87,7 +87,7 @@ app.use((req, res, next) => {
 // });
 
 //express router
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.redirect("/listings");
 });
 app.use("/listings", listingRouter);
